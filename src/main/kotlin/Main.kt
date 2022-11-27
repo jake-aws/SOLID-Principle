@@ -8,14 +8,14 @@ fun main() {
     val file:String = "Item.fileType"
 
 //    Dependency Injection
-    val uploadService:UploadService= UploadService()
-    val downloadService:DownloadService= DownloadService()
-    val system:System = dependencyInversion.System(downloadService, uploadService)
+    val uploadService = UploadService()
+    val downloadService = DownloadService()
+    val system = System(downloadService, uploadService)
     system.saveToDB(file, url)
     system.saveToDisk(file, dir)
 
 //    Without Dependency Injection
-    val badSystem:BadSystem = dependencyInversion.BadSystem()
+    val badSystem = BadSystem()
     badSystem.saveToDB(file, url)
     badSystem.saveToDisk(file, dir)
 
