@@ -3,9 +3,9 @@ import dependencyInversion.*
 
 fun main() {
 
-    val url:String = "Https://CloudStorage.com"
-    val dir:String = "C:\\Users\\jake\\Downloads"
-    val file:String = "Item.fileType"
+    val url = "Https://CloudStorage.com"
+    val dir = "C:\\Users\\jake\\Downloads"
+    val file = "Item.fileType"
 
 //    Dependency Injection
     val uploadService = UploadService()
